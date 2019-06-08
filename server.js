@@ -60,13 +60,11 @@ function queryData(query, res) {
     console.log('search query run')
     console.log(query);
 
-    // client.connect();
     client.query(query, (err, result) => {
-    
         if (err) throw err;
         
         this.sql
-        client.end();
+        
         console.log(result);
         return res.send(result);
         
